@@ -73,7 +73,7 @@ public class RequestHeader {
         Response response = client.newCall(request).execute();
 
         if(!response.isSuccessful()) {
-            throw new IOException("Запрос не выполнен" + "с кодом " + response.code() + "с телом " + response.body().string());
+            throw new IOException("Запрос не выполнен успешно" + "с кодом " + response.code() + "с телом " + response.body().string());
         }
 
         return response.body().string();
